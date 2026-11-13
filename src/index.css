@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@theme {
+  --color-opaline: #CDC4DC;
+  --color-wisteria: #6E5A88;
+  --color-starlight: #F3EEF8;
+  --color-plum: #261E31;
+  --color-plum-soft: #4A3D5C;
+
+  --font-georgia: Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+@layer base {
+  html,
+  body,
+  button,
+  input,
+  select,
+  textarea {
+    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  }
+
+  body {
+    background-color: #F3EEF8;
+    color: #261E31;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.blueprint-grid {
+  background-color: #F3EEF8;
+  background-image:
+    linear-gradient(to right, rgba(110, 90, 136, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(110, 90, 136, 0.08) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+@keyframes editorialFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-editorial {
+  animation: editorialFadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-editorial {
+    animation: none;
+  }
+}
+
+input[type="range"] {
+  accent-color: #6E5A88;
+}
